@@ -4,13 +4,13 @@ import static junit.framework.TestCase.*;
 
 public class ShoppingCartManagerTest {
     ShoppingCart shoppingCart;
-    Item item;
+    Product product;
     ShoppingCartManager shoppingCartManager;
 
     @Before
     public void setUp() {
         shoppingCart = new ShoppingCart(1, 2);
-        item = new Item(1, "jersey", 11.22);
+        product = new Product(1, "jersey", 11.22);
         shoppingCartManager = new ShoppingCartManager();
     }
 
@@ -21,7 +21,7 @@ public class ShoppingCartManagerTest {
 
     @Test
     public void testAddProduct() {
-        shoppingCartManager.addProduct(shoppingCart, item);
+        shoppingCartManager.addProduct(shoppingCart, product);
 
         int size = shoppingCartManager.getProducts();
 
@@ -30,7 +30,7 @@ public class ShoppingCartManagerTest {
 
     @Test
     public void testRemoveProduct() {
-        shoppingCartManager.addProduct(shoppingCart, item);
+        shoppingCartManager.addProduct(shoppingCart, product);
 
         int size = shoppingCartManager.getProducts();
 
@@ -39,15 +39,15 @@ public class ShoppingCartManagerTest {
 
     @Test
     public void testAddMoreThanOneProduct() {
-        shoppingCartManager.addProduct(shoppingCart, item);
-        Item item2 = new Item(2, "jersey", 11.22);
+        shoppingCartManager.addProduct(shoppingCart, product);
+        Product product2 = new Product(2, "jersey", 11.22);
 
-        List<Item> itemList = new ArrayList<>();
+        List<Product> productList = new ArrayList<>();
 
-        itemList.add(item);
-        itemList.add(item2);
+        productList.add(product);
+        productList.add(product2);
 
-        shoppingCartManager.addProducts(shoppingCart, itemList);
+        shoppingCartManager.addProducts(shoppingCart, productList);
 
         int size = shoppingCartManager.getProducts();
 

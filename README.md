@@ -20,7 +20,7 @@ One of our clients has asked for an ecommerce system. The shop will need a shopp
 1) Create a Shopping Cart Class and any other classes that you see fit. 
 (please create the branch - feature/shopping-cart)
 
-The Shopping Cart Class should have a `cartId` to indentify the cart, `userId` to whom the cart belongs to, `products` to hold the items to be purchased.
+The Shopping Cart Class should have a `cartId` to indentify the cart, `userId` to whom the cart belongs to, `products` to hold the products to be purchased.
 
 
 2) Implement the functionality to add and remove products from the Shopping Cart.
