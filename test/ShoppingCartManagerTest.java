@@ -37,6 +37,23 @@ public class ShoppingCartManagerTest {
         assertEquals(size, 1);
     }
 
+    @Test
+    public void testAddMoreThanOneProduct() {
+        shoppingCartManager.addProduct(shoppingCart, item);
+        Item item2 = new Item(2, "jersey", 11.22);
 
+        List<Item> itemList = new ArrayList<>();
+
+        itemList.add(item);
+        itemList.add(item2);
+
+        shoppingCartManager.addProducts(shoppingCart, itemList);
+
+        int size = shoppingCartManager.getProducts();
+
+
+        assertEquals(size, 2);
+
+    }
 
 }
