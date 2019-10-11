@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCart {
@@ -5,10 +6,10 @@ public class ShoppingCart {
     private int userId;
     private List<Item> itemList;
 
-    public ShoppingCart(int cartId, int userId, List<Item> itemList) {
+    public ShoppingCart(int cartId, int userId) {
         this.cartId = cartId;
         this.userId = userId;
-        this.itemList = itemList;
+        this.itemList = new ArrayList<>();
     }
 
     public int getCartId() {
@@ -34,4 +35,6 @@ public class ShoppingCart {
     public void setItemList(List<Item> itemList) {
         this.itemList = itemList;
     }
+
+
 }
