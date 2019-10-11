@@ -4,10 +4,10 @@ public class Main {
 
         ShoppingCart shoppingCart = new ShoppingCart(1, 2);
 
-        Item item = new Item(1, "jersey", 11.22);
+        Product product = new Product(1, "jersey", 11.22);
 
-        shoppingCartManager.addProduct(shoppingCart, item);
+        shoppingCartManager.addProduct(shoppingCart, product);
 
-        shoppingCartManager.removeProduct(shoppingCart, item);
+        shoppingCartManager.removeProduct(shoppingCart, product);
     }
 }
