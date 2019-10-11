@@ -7,6 +7,10 @@ public class ShoppingCartManager {
         shoppingCart.getItemList().add(item);
     }
 
+    public void addProducts(ShoppingCart shoppingCart, List<Item> items) {
+        shoppingCart.getItemList().addAll(items);
+    }
+
     public void removeProduct(ShoppingCart shoppingCart, Item item) {
         Item myItem = searchProduct(shoppingCart, item);
 
@@ -27,5 +31,9 @@ public class ShoppingCartManager {
 
         return null;
 
+    }
+
+    public List<Item> getProducts(ShoppingCart shoppingCart) {
+        return shoppingCart.getItemList();
     }
 }
