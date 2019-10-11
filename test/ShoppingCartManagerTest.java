@@ -31,10 +31,11 @@ public class ShoppingCartManagerTest {
     @Test
     public void testRemoveProduct() {
         shoppingCartManager.addProduct(shoppingCart, product);
+        shoppingCartManager.removeProduct(shoppingCart, product);
 
         int size = shoppingCartManager.getProducts();
 
-        assertEquals(size, 1);
+        assertEquals(size, 0);
     }
 
     @Test
