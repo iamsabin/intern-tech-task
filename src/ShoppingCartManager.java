@@ -7,5 +7,25 @@ public class ShoppingCartManager {
         shoppingCart.getItemList().add(item);
     }
 
+    public void removeProduct(ShoppingCart shoppingCart, Item item) {
+        Item myItem = searchProduct(shoppingCart, item);
 
+        if (myItem != null) {
+            shoppingCart.getItemList().remove(myItem);
+        }
+    }
+
+    public Item searchProduct(ShoppingCart shoppingCart, Item item) {
+        List<Item> itemList = shoppingCart.getItemList();
+
+        for (Item myItem: itemList) {
+            if (myItem.getId() == item.getId()) {
+                return myItem;
+            }
+
+        }
+
+        return null;
+
+    }
 }

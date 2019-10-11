@@ -8,6 +8,6 @@ public class Main {
 
         shoppingCartManager.addProduct(shoppingCart, item);
 
-//        shoppingCartManager.removeProduct(shoppingCart, item);
+        shoppingCartManager.removeProduct(shoppingCart, item);
     }
 }
