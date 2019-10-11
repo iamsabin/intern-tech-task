@@ -28,6 +28,15 @@ public class ShoppingCartManagerTest {
         assertEquals(size, 1);
     }
 
+    @Test
+    public void testRemoveProduct() {
+        shoppingCartManager.addProduct(shoppingCart, item);
+
+        int size = shoppingCartManager.getProducts();
+
+        assertEquals(size, 1);
+    }
+
 
 
 }
